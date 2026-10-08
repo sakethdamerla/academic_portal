@@ -545,7 +545,7 @@ export function InternalMarksManagementView() {
       ...prev,
       {
         levelNumber: prev.length + 1,
-        approverRoleKey: "principal",
+        approverRoleKey: "superadmin",
         levelLabel: `Level ${prev.length + 1} Approval`,
         isActive: true,
       },

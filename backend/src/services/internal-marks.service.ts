@@ -237,7 +237,7 @@ export async function ensureInternalMarksSchema() {
     console.warn("Could not seed internal_marks permissions:", err);
   }
 
-  // Seed default approval workflow levels if missing
+  // Seed default approval workflow levels (Level 1: HOD, Level 2: Principal)
   try {
     const existingConfigs = await queryAcademic<RowDataPacket[]>(
       `SELECT id FROM ap_internal_marks_approval_configs LIMIT 1`
